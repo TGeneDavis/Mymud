@@ -433,6 +433,8 @@ Error message and password prompt
 
 <li>Data</li>
 
+<li>DB Notes</li>
+
 <li>Game Dsign</li>
 
 <li>Game Loop</li>
@@ -9944,7 +9946,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201102143516040" list="[[Mymud Lore]]" modified="20201102145940945" title="$:/StoryList">
+<div list="[[DB Notes]] [[Mymud Lore]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10005,7 +10007,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20201031013541155" modified="20201102145953018" title="$:/temp/NewTagName">
+<div created="20201031013541155" modified="20201102150142785" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div author="Paco Rivière" core-version="&gt;=5.0.0" created="20201031010051403" dependents="" description="Catalan (Spain)" icon="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22810%22%20height%3D%22540%22%3E%0A%3Crect%20width%3D%22810%22%20height%3D%22540%22%20fill%3D%22%23FCDD09%22%2F%3E%0A%3Cpath%20stroke%3D%22%23DA121A%22%20stroke-width%3D%2260%22%20d%3D%22M0%2C90H810m0%2C120H0m0%2C120H810m0%2C120H0%22%2F%3E%0A%3C%2Fsvg%3E" modified="20201031010051403" name="ca-ES" original-plugin-type="language" original-tags="" original-title="$:/languages/ca-ES" original-type="application/json" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/languages/ca-ES" type="text/vnd.tiddlywiki" version="5.1.22">
@@ -11108,6 +11110,113 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20201102141622791" modified="20201102141654350" tags="[[Code Design]]" title="Data">
 <pre>* describe game
 * describe game state</pre>
+</div>
+<div created="20201102150127531" modified="20201102150216649" tags="Data" title="DB Notes">
+<pre>
+```
+-- users
+
+user_pk (big int)
+user_status_fk
+email
+salt
+hashed_password
+date_created
+
+-- user_status (active, disabled, banned, in_recycle_bin, etc)
+
+user_status_pk
+status_code
+status_display_name
+status_description
+
+-- player_characters
+
+pc_pk (big int)
+user_fk
+character_status_fk
+species_pk
+pc_name
+pc_description
+karma_score
+resolve_score
+date_created
+
+-- character_status (active, disabled, in_recycle_bin)
+
+character_status_pk
+status_code
+status_display_name
+status_description
+
+
+-- species
+
+species_pk
+species_code
+species_display_name
+species_description
+playable
+
+
+-- user_permissions (admin, user)
+
+up_pk (int)
+up_code
+up_display_name
+up_description
+up_score
+
+
+-- pc_stats_link
+
+pc_fk
+stat_fk
+stat_score
+
+
+-- pc_skills_link
+
+pc_fk
+skill_fk
+skills_score
+
+-- pc_stats
+
+stat_pk (int)
+stat_code
+stat_display_name
+stat_description
+
+-- pc_skills
+
+skills_pk (int)
+skills_code
+skills_display_name
+skills_description
+
+------------------------------------------------------------------------------------
+
+-- users
+
+user_pk (big int)
+user_status_fk
+unid
+email
+salt
+hashed_password
+date_created
+
+
+-- user_status (active, disabled, banned, etc)
+
+user_status_pk
+status_code
+status_display_name
+status_description
+
+```
+</pre>
 </div>
 <div created="20201102143731184" modified="20201102143828272" tags="[[World Design]]" title="Game Dsign">
 <pre>Level and geographic area design, story arcs, quests</pre>
