@@ -143,6 +143,8 @@ Error message and password prompt
 
 <li>$:/config/AutoSave</li>
 
+<li>$:/config/Navigation/openLinkFromInsideRiver</li>
+
 <li>$:/config/Plugins/Disabled/$:/plugins/venomspinner/ghostwriter</li>
 
 <li>$:/core</li>
@@ -185,9 +187,13 @@ Error message and password prompt
 
 <li>$:/state/tab/sidebar--595412856</li>
 
+<li>$:/state/toc/Contents-Code Design--1149710697</li>
+
 <li>$:/state/toc/Contents-Game Rules--1149710697</li>
 
 <li>$:/state/toc/Contents-Test 1--1149710697</li>
+
+<li>$:/state/toc/Contents/Code Design-Runtime--1149710697</li>
 
 <li>$:/status/RequireReloadDueToPluginChange</li>
 
@@ -415,6 +421,10 @@ Error message and password prompt
 
 <li>Code Design</li>
 
+<li>Data</li>
+
+<li>Game Loop</li>
+
 <li>Game Rules</li>
 
 <li>Mymud Lore</li>
@@ -425,9 +435,17 @@ Error message and password prompt
 
 <li>Powers and Champions</li>
 
+<li>Redis</li>
+
+<li>Runtime</li>
+
 <li>Sfere</li>
 
 <li>Stories and Vignettes</li>
+
+<li>Tools</li>
+
+<li>UI/UX</li>
 
 </ul>
 </p>
@@ -445,6 +463,9 @@ Error message and password prompt
 <div id="storeArea" style="display:none;">
 <div created="20201031010854182" modified="20201031010854182" title="$:/config/AutoSave">
 <pre>no</pre>
+</div>
+<div created="20201102142148311" modified="20201102142148311" title="$:/config/Navigation/openLinkFromInsideRiver">
+<pre>above</pre>
 </div>
 <div created="20201031005832324" modified="20201031005832324" title="$:/config/Plugins/Disabled/$:/plugins/venomspinner/ghostwriter">
 <pre>yes</pre>
@@ -9861,8 +9882,8 @@ Error message and password prompt
 <div created="20201031005241012" modified="20201031011701347" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20201031011725964" modified="20201031011746956" title="$:/state/tab--1963855381">
-<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
+<div created="20201031011725964" modified="20201102142119054" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/StoryView</pre>
 </div>
 <div created="20201031010054260" modified="20201031010054260" title="$:/state/tab--219645345">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Themes</pre>
@@ -9870,8 +9891,8 @@ Error message and password prompt
 <div created="20201031005825228" modified="20201031005839548" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Themes</pre>
 </div>
-<div created="20201031003743517" modified="20201031011723139" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20201031003743517" modified="20201102142128263" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Settings</pre>
 </div>
 <div created="20201031003751973" modified="20201031010851668" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
@@ -9882,16 +9903,22 @@ Error message and password prompt
 <div created="20201031005806764" modified="20201031110655248" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
+<div created="20201102141429166" modified="20201102141429166" title="$:/state/toc/Contents-Code Design--1149710697">
+<pre>open</pre>
+</div>
 <div created="20201101151103054" modified="20201101151103054" title="$:/state/toc/Contents-Game Rules--1149710697">
 <pre>open</pre>
 </div>
 <div created="20201031014048227" modified="20201031014048227" title="$:/state/toc/Contents-Test 1--1149710697">
 <pre>open</pre>
 </div>
+<div created="20201102142246287" modified="20201102142246287" title="$:/state/toc/Contents/Code Design-Runtime--1149710697">
+<pre>open</pre>
+</div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201101150643943" list="[[Mymud Lore]]" modified="20201101150643943" title="$:/StoryList">
+<div created="20201102141250519" list="[[Mymud Lore]]" modified="20201102142247151" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9952,7 +9979,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20201031013541155" modified="20201101150722647" title="$:/temp/NewTagName">
+<div created="20201031013541155" modified="20201102142010607" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div author="Paco Rivière" core-version="&gt;=5.0.0" created="20201031010051403" dependents="" description="Catalan (Spain)" icon="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22810%22%20height%3D%22540%22%3E%0A%3Crect%20width%3D%22810%22%20height%3D%22540%22%20fill%3D%22%23FCDD09%22%2F%3E%0A%3Cpath%20stroke%3D%22%23DA121A%22%20stroke-width%3D%2260%22%20d%3D%22M0%2C90H810m0%2C120H0m0%2C120H810m0%2C120H0%22%2F%3E%0A%3C%2Fsvg%3E" modified="20201031010051403" name="ca-ES" original-plugin-type="language" original-tags="" original-title="$:/languages/ca-ES" original-type="application/json" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/languages/ca-ES" type="text/vnd.tiddlywiki" version="5.1.22">
@@ -11043,6 +11070,77 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20201031110810505" modified="20201031111446608" tags="Contents" title="Code Design">
 <pre></pre>
 </div>
+<div created="20201102141622791" modified="20201102141654350" tags="[[Code Design]]" title="Data">
+<pre>* describe game
+* describe game state</pre>
+</div>
+<div created="20201102141957272" modified="20201102142051471" tags="Runtime" title="Game Loop">
+<pre>Mymud game loop
+---------------
+
+1) init-game
+
+	* load configuration/resource files
+	* set up event system
+
+2) enter-game-loop
+
+	* 20 ticks per second, meaning 50ms/tick (fastest. less if bogged down)
+	* 2400 ticks per day, meaning 20 minutes/day (fastest. less if bogged down)
+
+3) &quot;random&quot; tick rooms chosen
+
+	* 1/1000 of loaded rooms chosen to receive a random tick
+	* each room may choose to ignore, act on, or remember it received a random tick
+	* random ticks can result in crops growing, mobs healing, treasure spawning/despawning, players having karma affects, etc
+
+4) player ticks
+
+	* affects rooms containing players, including the room, players, treasures, and mobs in the room
+
+5) scheduled ticks
+
+	* requested by rooms/mobs/items/players
+	* removed if scheduler (ie room/mob/item/player) not loaded
+
+6) system ticks 
+
+	* updating game time
+	* handle events ... sunset, shutdown request, sunrise, earthquake, announcements
+
+7) auto save
+
+	* every five(?) minutes
+
+8) handle player interactions, commands, socials, and chats
+
+9) load/unload areas
+
+	* load when player enters a room that links to area
+	* all rooms in an area are either loaded or not loaded
+	* unload with players have not been in area or linked room for 40 seconds
+	* track time since last player present (or in linked room)
+
+10) check for shutdown request
+
+	* break out of loop in event of shutdown request
+	* loop to (2) if no shutdown request
+
+
+
+Considerations
+--------------
+
+* Throttle all commands and messages coming from clients/players
+* remember to split potentially large tasks up to run on multiple threads
+
+	- all actions in the game loop should be asynchronous, but also the next iteration should ** WAIT ** for all tasks to complete
+
+
+
+
+</pre>
+</div>
 <div created="20201031013450197" modified="20201031111341240" tags="Contents" title="Game Rules">
 <pre></pre>
 </div>
@@ -11064,11 +11162,29 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20201101150701472" modified="20201101151100358" tags="[[Game Rules]]" title="Powers and Champions">
 <pre>Powers are organized Nanos that interact as rulers, guides, and very magical  creators and destroyers of Sfere. They often choose one or more Champions from devout followers to give special powers and abilities to.</pre>
 </div>
+<div created="20201102141505344" modified="20201102141540479" tags="[[Code Design]]" title="Redis">
+<pre>* State
+* Events</pre>
+</div>
+<div created="20201102141701615" modified="20201102141738143" tags="[[Code Design]]" title="Runtime">
+<pre>* game
+* game engine
+* game loop</pre>
+</div>
 <div created="20201101151130615" modified="20201101151544903" tags="[[Game Rules]]" title="Sfere">
 <pre>Sfere is the Dyson sphere that the Nanos created and maintain. The mass and power needed for building, repairs and all the nanos do is derived from the Night Star that the Day Star tightly orbits.</pre>
 </div>
 <div created="20201031111312080" modified="20201031111427761" tags="Contents" title="Stories and Vignettes">
 <pre></pre>
+</div>
+<div created="20201102141750159" modified="20201102141922791" tags="[[Code Design]]" title="Tools">
+<pre>Custom tools
+
+* for creation and maintenance of game
+* administration </pre>
+</div>
+<div created="20201102141337784" modified="20201102141604615" tags="[[Code Design]]" title="UI/UX">
+<pre>JS and React</pre>
 </div>
 
 
